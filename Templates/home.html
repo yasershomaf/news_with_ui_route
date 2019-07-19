@@ -1,0 +1,10 @@
+<h1>Movies</h1>
+<div class="news_container">
+  <div ng-repeat="news in homeCtrl.newsList.articles" class="news_card">
+    <img class="card_image" ng-src="{{news.urlToImage ? news.urlToImage : 'https://www.breakingbelizenews.com/wp-content/uploads/2018/01/bbn-breaking-news.jpg'}}" alt="" />
+    <h2 class="card_title">{{news.title}}</h2>
+    <div class="card_details">{{news.author ? news.author + ' ' : ''}}{{news.publishedAt | date:'dd-MMMM-yyyy'}}</div>
+    <p class="card_content">{{news.content}}</p>
+    <a class="article_link" href="{{news.url}}" target="_blank">More details</a>
+  </div>
+</div>
